@@ -1,0 +1,6 @@
+// ---------------- AUTO GENERATED FILE; DON'T EDIT IT ----------------
+
+// Version of the application
+#define VERSION_MAJOR @VERSION_MAJOR@
+#define VERSION_MINOR @VERSION_MINOR@
+#define VERSION_PATCH @VERSION_PATCH@

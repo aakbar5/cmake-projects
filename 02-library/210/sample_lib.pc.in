@@ -1,0 +1,16 @@
+# Package Information for pkg-config
+
+prefix=@prefix@
+exec_prefix=${prefix}/bin
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: @target_lib@
+URL: http://lib.home.on.web
+Description: Sample library
+Version: @verison@
+
+Requires:
+Libs: -L${libdir} -l@target_lib@
+Libs.private: -lm
+Cflags: -I${includedir}

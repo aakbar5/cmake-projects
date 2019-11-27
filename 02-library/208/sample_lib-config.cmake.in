@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+set(@LIB_NAME@_VERSION              "@VERSION_STRING@")
+set(@LIB_NAME@_INSTALL_PREFIX       "@CMAKE_INSTALL_PREFIX@")
+set(@LIB_NAME@_INCLUDE_DIR          "@CMAKE_INSTALL_PREFIX@/include" )
+set(@LIB_NAME@_LIB_DIR              "@CMAKE_INSTALL_PREFIX@/lib")
+set(@LIB_NAME@_LIB_PKG_CONF_DIR     "@CMAKE_INSTALL_PREFIX@/lib/pkgconfig")
+set(@LIB_NAME@_LIB_CMAKE_CONF_DIR   "@CMAKE_INSTALL_PREFIX@/lib/cmake")
+
+include("@CMAKE_INSTALL_PREFIX@/lib/cmake/@LIB_NAME@-targets.cmake")
