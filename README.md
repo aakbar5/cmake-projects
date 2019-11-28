@@ -21,6 +21,8 @@ CMake examples of daily use.
 # Samples
 
 ## 01-app
+Single file to multiple files application alongwith setting up a specific version of CXX version.
+
 -  [101](01-app/101/CMakeLists.txt):
    - A very basic cmake application.
 
@@ -43,6 +45,7 @@ CMake examples of daily use.
    - A hello-world of std::cxx14.
 
 ## 02-library
+Create static and shared libraries and how to use these libraries with application in different ways.
 
 -  [201](02-library/201/CMakeLists.txt):
    - A static library using std::cxx14.
@@ -78,14 +81,19 @@ CMake examples of daily use.
    - A single project to build shared and static lib (pkg-config, .cmake).
 
 ## 03-external_libs
+Use 3rd party libraries in an application.
 
 -  [301](03-external_libs/301/CMakeLists.txt):
    - A hello-world using cmake.BOOST.
 
 ## 04-misc
+Miscellaneous usages.
 
 -  [401](04-misc/401/CMakeLists.txt):
    - Application packaging using cpack.
+
+-  [402](04-misc/402/CMakeLists.txt):
+   - How to use cmake custom command and target interfaces.
 
 # Tips
 
