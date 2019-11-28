@@ -95,6 +95,9 @@ Miscellaneous usages.
 -  [402](04-misc/402/CMakeLists.txt):
    - How to use cmake custom command and target interfaces.
 
+-  [403](04-misc/403/CMakeLists.txt):
+   - ExternalProject: Create custom targets to build projects in external trees.
+
 # Tips
 
 ## Print general info

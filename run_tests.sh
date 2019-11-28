@@ -413,6 +413,18 @@ function test_402() {
     make -C  $build_folder install
 }
 
+function test_403() {
+    echo "---- Test # 04-misc/403"
+    src_folder=04-misc/403
+    build_folder=$src_folder/build
+    install_folder=$src_folder/install
+
+    mkdir -p $build_folder && \
+    cmake -B $build_folder -DCMAKE_INSTALL_PREFIX=$install_folder -H$src_folder && \
+    make -C  $build_folder && \
+    make -C  $build_folder install
+}
+
 # -------------------------------
 # Cmake tests
 test_101
@@ -435,3 +447,4 @@ test_210
 test_301
 test_401
 test_402
+test_403
