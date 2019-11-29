@@ -9,6 +9,7 @@
     - [02-library](#02-library)
     - [03-external_libs](#03-external_libs)
     - [04-misc](#04-misc)
+- [TODOs](#todos)
 - [Tips](#tips)
     - [Print general info](#print-general-info)
     - [Show all variables](#show-all-variables)
@@ -97,6 +98,9 @@ Miscellaneous usages.
 
 -  [403](04-misc/403/CMakeLists.txt):
    - ExternalProject: Create custom targets to build projects in external trees.
+
+# TODOs
+- Linking of protobuf, flatbuffers and nanopb via cmake.
 
 # Tips
 
