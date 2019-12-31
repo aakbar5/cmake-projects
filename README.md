@@ -11,6 +11,7 @@
     - [04-misc](#04-misc)
 - [TODOs](#todos)
 - [Tips](#tips)
+    - [Set a variable](#set-a-variable)
     - [Print general info](#print-general-info)
     - [Show all variables](#show-all-variables)
 
@@ -103,6 +104,12 @@ Miscellaneous usages.
 - Linking of protobuf, flatbuffers and nanopb via cmake.
 
 # Tips
+
+## Set a variable
+```
+set(TEST_VAR "value")               # Overwrite old value if it set
+set(TEST_VAR "${TEST_VAR} value")   # Append  new value to old
+```
 
 ## Print general info
 ```
