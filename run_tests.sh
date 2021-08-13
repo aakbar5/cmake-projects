@@ -425,6 +425,20 @@ function test_403() {
     make -C  $build_folder install
 }
 
+function test_404() {
+    echo "---- Test # 04-misc/404"
+    src_folder=04-misc/404
+    build_folder=$src_folder/build
+    install_folder=$src_folder/install
+
+    mkdir -p $build_folder && \
+    cmake -B $build_folder -DCMAKE_INSTALL_PREFIX=$install_folder -H$src_folder && \
+    make -C  $build_folder && \
+    make -C  $build_folder install && \
+    $build_folder/sample_app && \
+    $build_folder/unit_test
+}
+
 # -------------------------------
 # Cmake tests
 test_101
@@ -448,3 +462,4 @@ test_301
 test_401
 test_402
 test_403
+test_404

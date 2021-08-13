@@ -66,74 +66,34 @@ install(TARGETS sample_app DESTINATION bin)
 ##----------------- ExternalProject - START -----------
 # ExternalProject: Create custom targets to build projects in external trees.
 
+add_executable(unit_test sample_unittest.cc)
+
+# Google benchmarking needs pthread
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+
 include(ExternalProject)
-ExternalProject_Add(project_zlib
-    BUILD_IN_SOURCE     1
-    PREFIX              zlib
-
-    # Use local downloaded one
-    URL                 ${PROJECT_SOURCE_DIR}/zlib.zip
-    URL_MD5             bad764f0beefb432508ce6c186b8b0dc
-
-    # SVN link can be used to download code, see #1
-
-    # GIT_REPOSITORY      https://github.com/madler/zlib.git
-    # GIT_TAG             v1.2.11
-
-    CONFIGURE_COMMAND   ./configure --static
-    BUILD_COMMAND       "make"
-    INSTALL_COMMAND     ""      # see #2
-    LOG_BUILD           1
-    LOG_INSTALL         1
+ExternalProject_Add(
+	gtest
+    PREFIX ${CMAKE_CURRENT_BINARY_DIR}/third_party
+	GIT_REPOSITORY https://github.com/google/googletest.git
+	GIT_TAG e2239ee6043f73722e7aa812a459f54a28552929
+	CMAKE_ARGS -DCMAKE_BUILD_TYPE=RELEASE
+	INSTALL_COMMAND ""
+	LOG_DOWNLOAD 1
+    LOG_BUILD 1
+	LOG_INSTALL 1
 )
+ExternalProject_Get_property(gtest SOURCE_DIR)
+ExternalProject_Get_Property(gtest BINARY_DIR)
+set(gtest_BINARY_DIR ${BINARY_DIR})
+set(gtest_SOURCE_DIR ${SOURCE_DIR})
+set(gtest_INCLUDE_DIR ${gtest_SOURCE_DIR}/googletest/include)
+set(gtest_LIBRARY ${gtest_BINARY_DIR}/lib/libgtest.a)
+set(gtest_LIBRARY_MAIN ${gtest_BINARY_DIR}/lib/libgtest_main.a)
 
-# Extract property of our external project to findout its source dir
-# See #3
-ExternalProject_Get_Property(project_zlib SOURCE_DIR)
-target_include_directories(sample_app PRIVATE
-    ${CMAKE_BINARY_DIR}
-    ${SOURCE_DIR}       # Pass on our external project to resolve headers
-)
-
-# Pass on library of our external to linker
-# Use #3 to link external project library
-target_link_libraries(sample_app  ${SOURCE_DIR}/libz.a)
-
-##
-# - 1
-# In my testing, I was using something following:
-#   SVN_REPOSITORY  "http://sample/svn/link"
-#   SVN_REVSION     "145"
-# During code extraction, cmake was unable to find out specified revision number
-# and was ending with error, it turned out be that I should have something like following:
-#   SVN_REPOSITORY  "http://sample/svn/link"
-#   SVN_REVSION     "-r  145"
-#
-#
-# - 2
-# As per documentation of zlib, make install can be used to install
-# build files so I was using INSTALL_COMMAND "make install" but it was
-# failing; If you won't specify INSTALL_COMMAND, cmake was trying to
-# install it. To avoid its installation empty string has been used.
-#
-#
-# - 3
-# Sadly we can not use find_package with ExternalProject_Add so that's why
-# one to manually link up different bits & pieces required to make use
-# of the external project. There is another way to pass external project
-# libraries to the target.
-#
-#[[
-# Create library target and marked it as import type
-add_library(ext_proj_lib STATIC IMPORTED)
-# Set library name and path to be used for library target created above
-set_target_properties(ext_proj_lib PROPERTIES IMPORTED_LOCATION "${SOURCE_DIR}/libz.a")
-# Add add_dependencies onto the external project for this library
-add_dependencies(ext_proj_lib project_zlib)
-# add_dependencies of library to to the application
-add_dependencies(sample_app ext_proj_lib)
-# Ask to link library with application
-target_link_libraries(sample_app ext_proj_lib)
-]]
+add_dependencies(unit_test gtest)
+target_include_directories(unit_test PRIVATE ${gtest_INCLUDE_DIR})
+target_link_libraries(unit_test PRIVATE Threads::Threads ${gtest_LIBRARY} ${gtest_LIBRARY_MAIN})
 
 ##----------------- ExternalProject - END -----------

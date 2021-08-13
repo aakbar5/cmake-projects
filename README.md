@@ -100,6 +100,9 @@ Miscellaneous usages.
 -  [403](04-misc/403/CMakeLists.txt):
    - ExternalProject: Create custom targets to build projects in external trees.
 
+-  [404](04-misc/404/CMakeLists.txt):
+   - ExternalProject: Pull GoogleTest (gtest) as cmake external project.
+
 # TODOs
 - Linking of protobuf, flatbuffers and nanopb via cmake.
 
