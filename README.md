@@ -5,10 +5,10 @@
 - [CMAKE Samples](#cmake-samples)
 - [Description](#description)
 - [Samples](#samples)
-    - [01-app](#01-app)
-    - [02-library](#02-library)
-    - [03-external_libs](#03-external_libs)
-    - [04-misc](#04-misc)
+    - [-app](#-app)
+    - [-library](#-library)
+    - [-external_libs](#-external_libs)
+    - [-misc](#-misc)
 - [TODOs](#todos)
 - [Tips](#tips)
     - [Set a variable](#set-a-variable)
@@ -62,25 +62,25 @@ Create static and shared libraries and how to use these libraries with applicati
    - An application using a shared library (direct linking).
 
 -  [205](02-library/205/CMakeLists.txt):
-   - An application using a libary via .pc (using pkg-config)
-   - pkg-config can be referred to static or shared library.
+   - An application using a libary via `.pc` (using `pkg-config`)
+   - `pkg-config` can be referred to static or shared library.
 
 -  [206](02-library/206/CMakeLists.txt):
    - Generate .cmake file for a library (static).
 
 -  [207](02-library/207/CMakeLists.txt):
-   - An application using a static library (using .cmake).
-   - TODO: Inherit compiler specific flags from library just like pkg-config can do that.
+   - An application using a static library (using `.cmake`).
+   - TODO: Inherit compiler specific flags from library just like `pkg-config` can do that.
 
 -  [208](02-library/208/CMakeLists.txt):
-   - Generate .cmake file for a library (shared library).
+   - Generate `.cmake` file for a library (shared library).
 
 -  [209](02-library/209/CMakeLists.txt):
-   - An application using a shared library (using .cmake).
-   - TODO: Inherit compiler specific flags from library just like pkg-config can do that.
+   - An application using a shared library (using `.cmake`).
+   - TODO: Inherit compiler specific flags from library just like `pkg-config` can do that.
 
 -  [210](02-library/210/CMakeLists.txt):
-   - A single project to build shared and static lib (pkg-config, .cmake).
+   - A single project to build shared and static lib (`pkg-config`, `.cmake`).
 
 ## 03-external_libs
 Use 3rd party libraries in an application.
@@ -96,6 +96,8 @@ Miscellaneous usages.
 
 -  [402](04-misc/402/CMakeLists.txt):
    - How to use cmake custom command and target interfaces.
+      - `add_custom_command` links to different stages of build `PRE_BUILD`, `PRE_LINK`, `POST_BUILD`
+      - Link `add_custom_command` with custom target.
 
 -  [403](04-misc/403/CMakeLists.txt):
    - ExternalProject: Create custom targets to build projects in external trees.
