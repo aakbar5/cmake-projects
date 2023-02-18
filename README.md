@@ -54,6 +54,7 @@ Create static and shared libraries and how to use these libraries with applicati
 
 -  [202](02-library/202/CMakeLists.txt):
    - A shared library using std::cxx14.
+   - Also see [211](02-library/211/CMakeLists.txt)
 
 -  [203](02-library/203/CMakeLists.txt):
    - An application using a static library (direct linking).
@@ -81,6 +82,9 @@ Create static and shared libraries and how to use these libraries with applicati
 
 -  [210](02-library/210/CMakeLists.txt):
    - A single project to build shared and static lib (`pkg-config`, `.cmake`).
+
+-  [211](02-library/211/CMakeLists.txt):
+   - An enhanced version of [202](02-library/202/CMakeLists.txt). Generator expressions are used.
 
 ## 03-external_libs
 Use 3rd party libraries in an application.

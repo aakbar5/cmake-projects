@@ -349,6 +349,24 @@ function test_210() {
     done
 }
 
+function test_211() {
+    echo "---- Test # 02-library/211"
+    src_folder=02-library/211
+    build_folder=$src_folder/build
+    install_folder=$src_folder/install
+
+    for type in "Release" "Debug"; do
+        build_folder=$src_folder/build_$type
+        install_folder=$src_folder/install_$type
+
+        echo "------ Build # $type" && \
+        mkdir -p $build_folder && \
+        cmake -B $build_folder -DCMAKE_BUILD_TYPE=$type -DCMAKE_INSTALL_PREFIX=$install_folder -H$src_folder && \
+        make -C  $build_folder && \
+        make -C  $build_folder install
+    done
+}
+
 function test_301() {
     echo "---- Test # 03-external_libs/301"
     src_folder=03-external_libs/301
@@ -458,6 +476,7 @@ test_207
 test_208
 test_209
 test_210
+test_211
 test_301
 test_401
 test_402
