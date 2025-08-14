@@ -7,8 +7,8 @@ echo "-- Run CMake test"
 echo "   Current directory: $CURRENT_DIR"
 
 function test_101() {
-    echo "---- Test # 01-app/101"
-    src_folder=01-app/101
+    echo "---- Test # s01-app/101"
+    src_folder=s01-app/101
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -21,8 +21,8 @@ function test_101() {
 }
 
 function test_102() {
-    echo "---- Test # 01-app/102"
-    src_folder=01-app/102
+    echo "---- Test # s01-app/102"
+    src_folder=s01-app/102
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -39,8 +39,8 @@ function test_102() {
 }
 
 function test_103() {
-    echo "---- Test # 01-app/103"
-    src_folder=01-app/103
+    echo "---- Test # s01-app/103"
+    src_folder=s01-app/103
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -59,8 +59,8 @@ function test_103() {
 }
 
 function test_104() {
-    echo "---- Test # 01-app/104"
-    src_folder=01-app/104
+    echo "---- Test # s01-app/104"
+    src_folder=s01-app/104
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -79,8 +79,8 @@ function test_104() {
 }
 
 function test_105() {
-    echo "---- Test # 01-app/105"
-    src_folder=01-app/105
+    echo "---- Test # s01-app/105"
+    src_folder=s01-app/105
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -100,8 +100,8 @@ function test_105() {
 }
 
 function test_106() {
-    echo "---- Test # 01-app/106"
-    src_folder=01-app/106
+    echo "---- Test # s01-app/106"
+    src_folder=s01-app/106
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -121,8 +121,8 @@ function test_106() {
 }
 
 function test_107() {
-    echo "---- Test # 01-app/107"
-    src_folder=01-app/107
+    echo "---- Test # s01-app/107"
+    src_folder=s01-app/107
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -141,8 +141,8 @@ function test_107() {
 }
 
 function test_201() {
-    echo "---- Test # 02-library/201"
-    src_folder=02-library/201
+    echo "---- Test # s02-library/201"
+    src_folder=s02-library/201
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -159,8 +159,8 @@ function test_201() {
 }
 
 function test_202() {
-    echo "---- Test # 02-library/202"
-    src_folder=02-library/202
+    echo "---- Test # s02-library/202"
+    src_folder=s02-library/202
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -177,8 +177,8 @@ function test_202() {
 }
 
 function test_203() {
-    echo "---- Test # 02-library/203"
-    src_folder=02-library/203
+    echo "---- Test # s02-library/203"
+    src_folder=s02-library/203
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -200,8 +200,8 @@ function test_203() {
 }
 
 function test_204() {
-    echo "---- Test # 02-library/204"
-    src_folder=02-library/204
+    echo "---- Test # s02-library/204"
+    src_folder=s02-library/204
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -223,8 +223,8 @@ function test_204() {
 }
 
 function test_205() {
-    echo "---- Test # 02-library/205"
-    src_folder=02-library/205
+    echo "---- Test # s02-library/205"
+    src_folder=s02-library/205
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -248,8 +248,8 @@ function test_205() {
 }
 
 function test_206() {
-    echo "---- Test # 02-library/206"
-    src_folder=02-library/206
+    echo "---- Test # s02-library/206"
+    src_folder=s02-library/206
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -266,8 +266,8 @@ function test_206() {
 }
 
 function test_207() {
-    echo "---- Test # 02-library/207"
-    src_folder=02-library/207
+    echo "---- Test # s02-library/207"
+    src_folder=s02-library/207
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -289,8 +289,8 @@ function test_207() {
 }
 
 function test_208() {
-    echo "---- Test # 02-library/208"
-    src_folder=02-library/208
+    echo "---- Test # s02-library/208"
+    src_folder=s02-library/208
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -307,8 +307,8 @@ function test_208() {
 }
 
 function test_209() {
-    echo "---- Test # 02-library/209"
-    src_folder=02-library/209
+    echo "---- Test # s02-library/209"
+    src_folder=s02-library/209
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -330,8 +330,8 @@ function test_209() {
 }
 
 function test_210() {
-    echo "---- Test # 02-library/210"
-    src_folder=02-library/210
+    echo "---- Test # s02-library/210"
+    src_folder=s02-library/210
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -350,8 +350,8 @@ function test_210() {
 }
 
 function test_211() {
-    echo "---- Test # 02-library/211"
-    src_folder=02-library/211
+    echo "---- Test # s02-library/211"
+    src_folder=s02-library/211
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -368,8 +368,8 @@ function test_211() {
 }
 
 function test_301() {
-    echo "---- Test # 03-external_libs/301"
-    src_folder=03-external_libs/301
+    echo "---- Test # s03-external_libs/301"
+    src_folder=s03-external_libs/301
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -398,8 +398,8 @@ function test_301() {
 }
 
 function test_401() {
-    echo "---- Test # 04-misc/401"
-    src_folder=04-misc/401
+    echo "---- Test # s04-misc/401"
+    src_folder=s04-misc/401
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -419,8 +419,8 @@ function test_401() {
 }
 
 function test_402() {
-    echo "---- Test # 04-misc/402"
-    src_folder=04-misc/402
+    echo "---- Test # s04-misc/402"
+    src_folder=s04-misc/402
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -432,8 +432,8 @@ function test_402() {
 }
 
 function test_403() {
-    echo "---- Test # 04-misc/403"
-    src_folder=04-misc/403
+    echo "---- Test # s04-misc/403"
+    src_folder=s04-misc/403
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 
@@ -444,8 +444,8 @@ function test_403() {
 }
 
 function test_404() {
-    echo "---- Test # 04-misc/404"
-    src_folder=04-misc/404
+    echo "---- Test # s04-misc/404"
+    src_folder=s04-misc/404
     build_folder=$src_folder/build
     install_folder=$src_folder/install
 

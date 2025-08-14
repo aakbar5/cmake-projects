@@ -5,10 +5,10 @@
 - [CMAKE Samples](#cmake-samples)
 - [Description](#description)
 - [Samples](#samples)
-    - [-app](#-app)
-    - [-library](#-library)
-    - [-external_libs](#-external_libs)
-    - [-misc](#-misc)
+    - [s01-app](#s01-app)
+    - [s02-library](#s02-library)
+    - [s03-external_libs](#s03-external_libs)
+    - [s04-misc](#s04-misc)
 - [TODOs](#todos)
 - [Tips](#tips)
     - [Set a variable](#set-a-variable)
@@ -24,7 +24,7 @@ CMake examples of daily use.
 
 # Samples
 
-## 01-app
+## s01-app
 Single file to multiple files application alongwith setting up a specific version of CXX version.
 
 -  [101](01-app/101/CMakeLists.txt):
@@ -48,7 +48,7 @@ Single file to multiple files application alongwith setting up a specific versio
 -  [107](01-app/107/CMakeLists.txt):
    - A hello-world of std::cxx14.
 
-## 02-library
+## s02-library
 Create static and shared libraries and how to use these libraries with application in different ways.
 
 -  [201](02-library/201/CMakeLists.txt):
@@ -88,13 +88,13 @@ Create static and shared libraries and how to use these libraries with applicati
 -  [211](02-library/211/CMakeLists.txt):
    - An enhanced version of [202](02-library/202/CMakeLists.txt). Generator expressions are used.
 
-## 03-external_libs
+## s03-external_libs
 Use 3rd party libraries in an application.
 
 -  [301](03-external_libs/301/CMakeLists.txt):
    - A hello-world using cmake.BOOST.
 
-## 04-misc
+## s04-misc
 Miscellaneous usages.
 
 -  [401](04-misc/401/CMakeLists.txt):
